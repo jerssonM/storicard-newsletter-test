@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 
 import prisma from "@/lib/config/prisma";
-import { NewsletterData, NewsletterStatus } from "@/services/models";
+import { NewsletterData, NewsletterStatus } from "@/lib/services/models";
 
 import { getTemplate } from "./template";
 

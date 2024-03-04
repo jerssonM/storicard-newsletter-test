@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import prisma from "@/lib/config/prisma";
-import { NewsletterStatus } from "@/services/models";
+import { NewsletterStatus } from "@/lib/services/models";
 
 type RouteParams = { params: { id: string } };
 

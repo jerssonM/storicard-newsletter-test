@@ -1,4 +1,4 @@
-import { NewsletterStatus, User } from "@/services/models";
+import { NewsletterStatus, User } from "@/lib/services/models";
 import {
   Table,
   TableHeader,

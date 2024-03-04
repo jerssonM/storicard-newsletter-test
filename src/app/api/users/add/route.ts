@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import prisma from "@/lib/config/prisma";
-import { NewsletterStatus, SubscriptionData } from "@/services/models";
+import { NewsletterStatus, SubscriptionData } from "@/lib/services/models";
 
 const isValidPayload = ({ name, email }: SubscriptionData) => name && email;
 

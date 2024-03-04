@@ -1,6 +1,11 @@
 # [Stori Card Test](https://storicard-newsletter-test.vercel.app/)
 
-This project was built using Next.js 13 as a full-stack framework
+This project was built using Next.js 13 as a full-stack framework and consists of a small newsletter application which allows:
+
+- Viewing subscribed users
+- Subscribing new users
+- Sending a newsletter to all users with a predefined HTML template
+- Unsubscribing a user via the received email.
 
 The project and the Postgres database are hosted through Vercel.
 
@@ -16,19 +21,14 @@ The project and the Postgres database are hosted through Vercel.
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## Project structure
-
     ├──__tests__           # unit tests
     src
     ├── app                # Next.js 13 app route folder
     ├────── api            # Next.js api's (nextauth & local api's)
+    ├─- components     # common ui components
     ├── lib                
-    ├─-─-─- components     # common ui components
     ├─-─-─- config         # global config files
-    ├───-─- constants      # common constants values
-    ├───-─- container      # container components (business logic)
-    ├───-─- providers      # provider components
     └───-─- services       # api services and axios instances
-    └───-─- styles         # global css files and tailwind config
 
 ## Project setup
 

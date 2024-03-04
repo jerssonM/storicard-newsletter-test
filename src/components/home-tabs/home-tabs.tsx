@@ -1,7 +1,7 @@
 "use client";
 import { Tabs, Tab } from "@nextui-org/tabs";
 
-import { User } from "@/services/models";
+import { User } from "@/lib/services/models";
 import { UsersTable } from "@/components/users-table/users-table";
 import { NewsletterForm } from "@/components/newsletter-form/newsletter-form";
 import { SubscribeForm } from "../subscribe-form/subscribe-form";

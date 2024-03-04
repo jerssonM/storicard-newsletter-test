@@ -1,5 +1,5 @@
 import { User } from "@prisma/client";
-import { NewsletterData } from "@/services/models";
+import { NewsletterData } from "@/lib/services/models";
 
 export const getTemplate = (
   { subject, content, callToAction }: NewsletterData,
