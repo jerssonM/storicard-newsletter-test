@@ -5,7 +5,7 @@ This project was built using Next.js 13 as a full-stack framework and consists o
 - Viewing subscribed users
 - Subscribing new users
 - Sending a newsletter to all users with a predefined HTML template
-- Unsubscribing a user via the received email.
+- Unsubscribing a user via the received email link
 
 The project and the Postgres database are hosted through Vercel.
 
@@ -25,7 +25,7 @@ The project and the Postgres database are hosted through Vercel.
     src
     ├── app                # Next.js 13 app route folder
     ├────── api            # Next.js api's (nextauth & local api's)
-    ├─- components     # common ui components
+    ├─- components         # common ui components
     ├── lib                
     ├─-─-─- config         # global config files
     └───-─- services       # api services and axios instances
@@ -35,4 +35,3 @@ The project and the Postgres database are hosted through Vercel.
 Create a .env file, set the correct node version and include the values that are indicated in the .env.example
 
 > Run project with yarn dev
-
