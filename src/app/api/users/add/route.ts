@@ -17,7 +17,7 @@ export const POST = async (request: NextRequest) => {
 
   const user = await prisma.user.findMany({ where: { email: payload.email } });
 
-  if (user) {
+  if (user.length) {
     return NextResponse.json(
       { message: "This email is already added" },
       { status: 400 }
@@ -28,5 +28,5 @@ export const POST = async (request: NextRequest) => {
     data: { ...payload, newsletterStatus: NewsletterStatus.Subscribed },
   });
 
-  return NextResponse.json(user);
+  return NextResponse.json(userCreated);
 };
