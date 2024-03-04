@@ -14,7 +14,7 @@ export default function HomeTabs({ users }: HomeTabsProps) {
   return (
     <Tabs>
       <Tab key="users" title="Users" className="w-full">
-        <div className="grid gap-8 grid-cols-2 mt-10">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mt-10">
           <UsersTable data={users} />
           <SubscribeFormContainer />
         </div>

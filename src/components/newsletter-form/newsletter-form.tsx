@@ -19,7 +19,7 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
     ref
   ) {
     return (
-      <Card className="mt-4 w-4/6 my-0 mx-auto">
+      <Card className="mt-4 w-11/12 md:w-4/6 my-0 mx-auto">
         <CardHeader>
           <h2>Send newsletter!</h2>
         </CardHeader>
