@@ -13,10 +13,8 @@ export interface User {
 export interface NewsletterData {
   subject: string;
   content: string;
-  callToAction: {
-    label: string;
-    link: string;
-  };
+  callToActionLabel: string;
+  callToActionLink: string;
 }
 
 export interface SubscriptionData {

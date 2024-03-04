@@ -6,7 +6,9 @@ import { NewsletterForm } from "@/components/newsletter-form/newsletter-form";
 describe("<NewsletterForm />", () => {
   it("Should call newsletter create method", async () => {
     const spyOnSubmit = vi.fn();
-    render(<NewsletterForm onSubmit={spyOnSubmit} isLoading={false} />);
+    render(
+      <NewsletterForm images={[]} onSubmit={spyOnSubmit} isLoading={false} />
+    );
 
     const inputSubject = screen.getByLabelText("Subject");
     const inputCallToActionLabel = screen.getByLabelText(
@@ -20,10 +22,10 @@ describe("<NewsletterForm />", () => {
       target: { name: "subject", value: "Subject" },
     });
     fireEvent.change(inputCallToActionLabel, {
-      target: { name: "label", value: "Click me!" },
+      target: { name: "callToActionLabel", value: "Click me!" },
     });
     fireEvent.change(inputCallToActionLink, {
-      target: { name: "link", value: "www.google.com" },
+      target: { name: "callToActionLink", value: "www.google.com" },
     });
     fireEvent.change(inputContent, {
       target: {
@@ -41,7 +43,9 @@ describe("<NewsletterForm />", () => {
 
   it("Should call newsletter create method without data", async () => {
     const spyOnSubmit = vi.fn();
-    render(<NewsletterForm onSubmit={spyOnSubmit} isLoading={false} />);
+    render(
+      <NewsletterForm images={[]} onSubmit={spyOnSubmit} isLoading={false} />
+    );
 
     const [buttonSend] = screen.getAllByTestId("newsletter-button-send");
 

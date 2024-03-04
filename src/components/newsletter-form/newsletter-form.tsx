@@ -2,14 +2,22 @@ import { FormEventHandler, forwardRef } from "react";
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/input";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { ImageListType } from "react-images-uploading";
+
+import { ImageUploader } from "../image-uploader/image-uploader";
 
 interface NewsletterFormProps {
   isLoading: boolean;
   onSubmit: FormEventHandler<HTMLFormElement>;
+  images: ImageListType;
+  onChangeImages?: (imageList: ImageListType) => void;
 }
 
 export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
-  function NewsletterForm({ onSubmit, isLoading }, ref) {
+  function NewsletterForm(
+    { images, onSubmit, isLoading, onChangeImages },
+    ref
+  ) {
     return (
       <Card className="mt-4 w-4/6 my-0 mx-auto">
         <CardHeader>
@@ -30,13 +38,13 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
                 className="mb-4"
                 label="Call to action label"
                 required
-                name="label"
+                name="callToActionLabel"
               />
               <Input
                 className="mb-4"
                 label="Call to action link"
                 required
-                name="link"
+                name="callToActionLink"
                 isRequired
               />
             </div>
@@ -49,6 +57,8 @@ export const NewsletterForm = forwardRef<HTMLFormElement, NewsletterFormProps>(
               minLength={40}
               placeholder="Minimum 40 characters"
             />
+            <ImageUploader images={images} onChange={onChangeImages} />
+            <hr className="my-4" />
             <Button
               data-testid="newsletter-button-send"
               type="submit"

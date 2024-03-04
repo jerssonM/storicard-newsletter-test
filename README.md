@@ -5,6 +5,7 @@ This project was built using Next.js 13 as a full-stack framework and consists o
 - Viewing subscribed users
 - Subscribing new users
 - Sending a newsletter to all users with a predefined HTML template
+- Sending a newsletter with photo a attachment
 - Unsubscribing a user via the received email link
 
 The project and the Postgres database are hosted through Vercel.

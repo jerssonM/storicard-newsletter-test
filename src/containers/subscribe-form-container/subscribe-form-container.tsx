@@ -33,5 +33,7 @@ export const SubscribeFormContainer = () => {
     }
   };
 
-  return <SubscribeForm isLoading={isLoading} onSubmit={onSubmit} />;
+  return (
+    <SubscribeForm isLoading={isLoading} onSubmit={onSubmit} ref={formRef} />
+  );
 };

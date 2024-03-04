@@ -2,7 +2,7 @@ import { User } from "@prisma/client";
 import { NewsletterData } from "@/lib/services/models";
 
 export const getTemplate = (
-  { subject, content, callToAction }: NewsletterData,
+  { subject, content, callToActionLabel, callToActionLink }: NewsletterData,
   user: User
 ) => {
   const basePath = process.env.NEXT_PUBLIC_BASE_URL;
@@ -328,7 +328,7 @@ export const getTemplate = (
                           <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                               <tr>
-                                <td> <a href="${callToAction.link}" target="_blank">${callToAction.label}</a> </td>
+                                <td> <a href="${callToActionLink}" target="_blank">${callToActionLabel}</a> </td>
                               </tr>
                             </tbody>
                           </table>
