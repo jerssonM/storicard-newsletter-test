@@ -5,7 +5,7 @@ export const getTemplate = (
   { subject, content, callToAction }: NewsletterData,
   user: User
 ) => {
-  const basePath = process.env.VERCEL_URL;
+  const basePath = process.env.NEXT_PUBLIC_BASE_URL;
 
   return `
 <!doctype html>
