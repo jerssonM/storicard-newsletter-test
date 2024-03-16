@@ -39,6 +39,7 @@ To run this project locally, you need the following requirements:
 - Generate an application password, preferably from Gmail
 - Set the environment variables as indicated in the .env.example file with the previous steps
 - Install dependencies with `yarn install`
+- Set the exact Node.js version through nvm, using `nvm use`
 - Run project with `yarn dev`
 
 > If you prefer to skip these steps, you can also view the deployed version of the project on Vercel at the following [link](https://storicard-newsletter-test.vercel.app).
