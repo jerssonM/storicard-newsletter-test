@@ -8,7 +8,7 @@ This project was built using Next.js 13 as a full-stack framework and consists o
 - Sending a newsletter with photo a attachment
 - Unsubscribing a user via the received email link
 
-The project and the Postgres database are hosted through Vercel.
+This project uses Next.js as a full-stack framework through its new features such as app router and server components, which allow for creating pages and APIs without the need for an external backend under the same framework. Our pages directly consume these local APIs, which, through the Prismic ORM and the Nodemailer library, perform operations in the database and manage email sending. In the project's structure, we can see the implementation of a container pattern, which allows for the separation of business logic from UI logic.
 
 ## Building with:
 
@@ -23,7 +23,7 @@ The project and the Postgres database are hosted through Vercel.
 
 ## Project structure
     ├──__tests__           # unit tests
-    src
+    |-src
     ├── app                # Next.js 13 app route folder
     ├────── api            # Next.js api's (nextauth & local api's)
     ├─- components         # common ui components
@@ -33,6 +33,12 @@ The project and the Postgres database are hosted through Vercel.
 
 ## Project setup
 
-Create a .env file, set the correct node version and include the values that are indicated in the .env.example
+To run this project locally, you need the following requirements:
 
-> Run project with yarn dev
+- Set up a PostgreSQL database
+- Generate an application password, preferably from Gmail
+- Set the environment variables as indicated in the .env.example file with the previous steps
+- Install dependencies with `yarn install`
+- Run project with `yarn dev`
+
+> If you prefer to skip these steps, you can also view the deployed version of the project on Vercel at the following [link](https://storicard-newsletter-test.vercel.app).
